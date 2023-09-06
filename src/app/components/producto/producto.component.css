@@ -1,8 +1,5 @@
-img{
-    width: 100px;
-    height: 100px;
-}
 div{
     border:1px solid;
     border-radius: 10px;
+    padding: 10px;
 }

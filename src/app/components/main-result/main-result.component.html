@@ -1,5 +1,27 @@
+<div class="contenedorResultados">
+    <app-producto
+        [productoHijo]="item" *ngFor="let item of productos"
+        (verDetallePadreEvent)= "verDetalle($event)">
+    </app-producto>
 
-<div>
-    
-    <app-producto [productoHijo]="item" *ngFor="let item of productos"></app-producto>
-</div>
+    <div class="product-detail" [class.active]="showBar">
+        <div class="botones">
+            <button (click)="cerrarBarra()">Agregar al carrito</button>
+            <button (click)="cerrarBarra()">Cerrar</button>
+            
+        </div>
+        <div class="contenedorDetalle">
+            <app-img [imgPadre]="productoSeleccionado.imagen"></app-img>
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>Nombre: {{productoSeleccionado.nombre}}</tr>
+                    <tr>Codgo: {{productoSeleccionado.codigo}}</tr>
+                    <tr>Descripcion: {{productoSeleccionado.descripcion}}</tr>
+                    <tr>Especificacion: {{productoSeleccionado.especificacion}}</tr>
+                    <tr><b>Precio: ${{productoSeleccionado.precioVenta}}</b></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div> 

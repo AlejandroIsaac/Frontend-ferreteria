@@ -1,6 +1,8 @@
 <div>
-    <img [src]="productoHijo.image" alt="">
-    <p>{{productoHijo.title}}</p>
-    <p>{{productoHijo.price}}</p>
+    <app-img [imgPadre]="productoHijo.imagen"></app-img>
+    <p>{{productoHijo.nombre}}</p>
+    <p>Codigo:{{productoHijo.codigo}}</p>
+    <b><p>${{productoHijo.precioVenta}}</p></b>
+    <button (click)="verDetalle()">Ver detalle</button>
     <button>Agregar a carrito</button>  
 </div>

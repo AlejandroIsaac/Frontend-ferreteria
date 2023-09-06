@@ -1,0 +1,6 @@
+<div>
+    <img [src]="imgPadre" *ngIf="imgPadre; else bloqueDefault">
+    <ng-template #bloqueDefault>
+        <img [src]="imgDefault" alt="">
+    </ng-template>
+</div>

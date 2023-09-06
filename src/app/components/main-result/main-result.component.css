@@ -1,14 +1,43 @@
-div{
+.contenedorResultados{
     width: 79.8%;
     height: 80%;
     border-radius: 3px;
-    border: 3px solid;
+    border: 1px solid;
     float: right;
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 15px;
     overflow: scroll;
-
 }
 
+.product-detail {
+  border:5px outset;
+  border-color:white;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: all ease-out 0.5s;
+  transform: translateX(100%);
+  &.active {
+    transform: translateX(0);
+  }
+}
+.contenedorDetalle{
+  padding: 5%;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.botones{
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid;
+  height: 7%;
+  padding: 5px;
+}
