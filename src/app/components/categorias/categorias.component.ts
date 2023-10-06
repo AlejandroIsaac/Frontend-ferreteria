@@ -21,9 +21,9 @@ export class CategoriasComponent implements OnInit{
       {id:2, nombre:"Mario", descripcion:"algo"}
       ];
     this.categoriaService.getAllcategorias().subscribe(categorias => {
-      console.log(categorias)
+      //console.log(categorias)
       this.categorias= categorias;
-      console.log(this.categorias)
+      //console.log(this.categorias)
     });
   }
 

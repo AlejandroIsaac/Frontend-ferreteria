@@ -1,0 +1,58 @@
+<div class="contenedorFormularios">
+<section class="seccion">
+    <h2>PRODUCTOS</h2>
+    <h3>Ingresa nuevo productos</h3>
+
+    <form class="formulario" (ngSubmit)="guardarPoducto()">
+        <label>Nombre: <input type="text" name="nombre" [(ngModel)]="nuevoproducto.nombre"></label> 
+        <label>Codigo: <input type="text" name="codigo" [(ngModel)]="nuevoproducto.codigo"></label>
+        <label>Descripcion: <input type="text" name="descripcion" [(ngModel)]="nuevoproducto.descripcion"></label>
+        <label>Imagen:<input type="text" name="imagen" [(ngModel)]="nuevoproducto.imagen"></label>
+        <label>Precio costo: <input type="number" name="precio_costo" [(ngModel)]="nuevoproducto.precioCosto"></label>
+        <label>Precio promocion: <input type="number" name="precio_promocion" [(ngModel)]="nuevoproducto.precioPromocion"></label>
+        <label>Precio venta: <input type="number" name="precioVenta" [(ngModel)]="nuevoproducto.precioVenta"></label>      
+        <label>Categoria: 
+            <select name="categoria_id" [(ngModel)]="nuevoproducto.categoria">
+                <option [ngValue]= 'categoria' *ngFor="let categoria of categorias">{{categoria.nombre}}</option>
+            </select>
+        </label>
+        <label>Provedor: 
+            <select  type="number" name="provedor_id" [(ngModel)]="nuevoproducto.provedor">
+                <option  [ngValue]="provedor" *ngFor="let provedor of provedores">{{provedor.organizacion}}</option>
+            </select>
+        </label>
+        <label>Especificaciones:
+            <textarea cols="21" rows="5" type="text" name="especificacion" [(ngModel)]="nuevoproducto.especificacion">
+
+            </textarea> 
+            <!--<input type="textarea" name="especificacion" [(ngModel)]="nuevoproducto.especificacion">-->
+        </label>
+        <br>
+        <button type="submit" class="botonGuardar">Guardar</button>
+    </form>
+
+</section>
+
+<section class="seccion">
+    <h2>CATEGORIAS</h2>
+    <h3>Ingresa nuevo categoria</h3>
+    <form class="formulario" (ngSubmit)="guardarCategoria()">
+        <label>Nombre: <input type="text" name="nombre" [(ngModel)]="nuevaCategoria.nombre"></label> 
+        <label>Descripcion: <input type="text" name="descripcion" [(ngModel)]="nuevaCategoria.descripcion"></label>     
+        <br>
+        <button type="submit" class="botonGuardar">Guardar</button>
+    </form>
+</section>
+
+<section class="seccion">
+    <h2>PROVEDOR</h2>
+    <h3>Ingresa nuevo provedor</h3>
+    <form class="formulario" (ngSubmit)="guardarProvedor()">
+        <label>Organizacion: <input type="text" name="organizacion" [(ngModel)]="nuevoProvedor.organizacion"></label> 
+        <label>Vendedor: <input type="text" name="vendedor" [(ngModel)]="nuevoProvedor.vendedor"></label>
+        <label>Dereccion: <input type="text" name="direccion" [(ngModel)]="nuevoProvedor.direccion"></label>     
+        <br>
+        <button type="submit" class="botonGuardar">Guardar</button>
+    </form>
+</section>
+</div>

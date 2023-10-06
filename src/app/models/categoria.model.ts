@@ -3,3 +3,6 @@ export interface Categoria{
     descripcion:string;
     nombre:string;
 } 
+export interface CategoriaDTO extends Omit<Categoria,'id'>{
+
+}

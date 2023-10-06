@@ -1,13 +1,29 @@
+import { Categoria } from "./categoria.model";
+import { Provedor } from "./provedor.model";
+
 export interface Producto {
     id:number;
-    codigo:number;
+    codigo:string;
     descripcion:string;
     especificacion:string;
     imagen:string;
     nombre:string;
-    precio_costo:number;
-    precio_promocion:number;
+    precioCosto:number;
+    precioPromocion:number;
     precioVenta:number;
-    categoria_id:number;
-    provedor_id:number;
+    categoria:number;
+    provedor:number;
+}
+
+export interface ProductoDTO {
+    codigo:string;
+    descripcion:string;
+    especificacion:string;
+    imagen:string;
+    nombre:string;
+    precioCosto:number;
+    precioPromocion:number;
+    precioVenta:number;
+    categoria:Categoria;
+    provedor:Provedor;
 }

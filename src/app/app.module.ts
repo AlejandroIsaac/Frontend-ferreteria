@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import {MatSelectModule} from '@angular/material/select';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms'
 ;
 import { HeaderComponent } from './components/header/header.component';
 import { BuscadorComponent } from './components/buscador/buscador.component';
@@ -15,6 +16,7 @@ import { MainResultComponent } from './components/main-result/main-result.compon
 import { FooterComponent } from './components/footer/footer.component';
 import { ProductoComponent } from './components/producto/producto.component';
 import { ImgComponent } from './components/img/img.component';
+import { CreateEntityComponent } from './components/create-entity/create-entity.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ImgComponent } from './components/img/img.component';
     MainResultComponent,
     FooterComponent,
     ProductoComponent,
-    ImgComponent
+    ImgComponent,
+    CreateEntityComponent,
+    
   ],
   imports: [
     HttpClientModule,
@@ -33,7 +37,9 @@ import { ImgComponent } from './components/img/img.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSlideToggleModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

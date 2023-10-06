@@ -11,16 +11,16 @@ export class MainResultComponent implements OnInit{
   showBar=false;
   productoSeleccionado:Producto={
     id:0,
-    codigo:0,
+    codigo:"",
     descripcion:"",
     especificacion:"",
     imagen:"",
     nombre:"",
-    precio_costo:0,
-    precio_promocion:0,
+    precioCosto:0,
+    precioPromocion:0,
     precioVenta:0,
-    categoria_id:0,
-    provedor_id:0
+    categoria:0,
+    provedor:0
   };
 
   constructor(
@@ -28,7 +28,7 @@ export class MainResultComponent implements OnInit{
   ){}
   ngOnInit(): void {
     this.productoService.getAllProducts().subscribe(productos=>{
-      console.log(productos);
+      //console.log(productos);
       this.productos=productos;
     });
   }

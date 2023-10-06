@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Categoria } from '../models/categoria.model';
+import { Categoria, CategoriaDTO } from '../models/categoria.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +12,8 @@ export class CategoriaService {
   ) { }
   getAllcategorias(){
     return this.http.get<Categoria[]>("http://localhost:8080/categorias");
+  }
+  create(categoriaDTO: CategoriaDTO){
+    return this.http.post<Categoria>(this.URL,categoriaDTO);
   }
 }

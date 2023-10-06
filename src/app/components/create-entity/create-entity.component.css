@@ -1,0 +1,36 @@
+.contenedorFormularios{
+    height: 100%;
+    display: flex;
+    font-size: large;
+}
+.seccion{
+    padding: 1%;
+    border: 1px solid black; 
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    width: 33%;
+    align-items: center;
+}
+ .formulario{
+    padding: 3%;
+    width: 100%;
+    display: flex; 
+    flex-direction: column;
+    border: 10px solid rgb(185, 185, 185);
+    border-radius: 10px;   
+} 
+label{
+    display:flex ;
+    justify-content: space-between;
+}
+.categoria{
+    width: 33%;
+    border: 1px solid black;
+    flex-grow: 1;
+}
+.provedor{
+    width: 33%;
+    border: 1px solid black;
+    flex-grow: 1;
+}
